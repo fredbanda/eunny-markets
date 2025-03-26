@@ -470,6 +470,7 @@ DEPENDENCIES
   debug
   guard
   guard-minitest
+  i18n (~> 1.14, >= 1.14.1)
   image_processing (~> 1.2)
   jbuilder
   jsbundling-rails
