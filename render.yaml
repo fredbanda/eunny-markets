@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: market-link
+    env: ruby
+    plan: free
+    numInstances: 1
+    buildCommand: bin/render-build.sh
+    startCommand: bundle exec puma -C config/deploy/puma.rb
+    envVars:
+      - key: DATABASE_URL
+        value: "postgresql://neondb_owner:npg_lLeRb4gfUZ9X@ep-round-grass-a4rm4n96-pooler.us-east-1.aws.neon.tech/eunny_rails_db?sslmode=require"
+      - key: RAILS_MASTER_KEY
+        sync: false
